@@ -7,11 +7,11 @@ const Task = ({ task, onDelete, onToggle }) => {
       onDoubleClick={() => onToggle(task.id)}
     >
       <div className="heading-button-container">
-      <h3>
+      <h3 id={task.id}>
         {task.text}{' '}
       </h3>
       
-        <button aria-label="Delete task" className="close-button">
+        <button aria-label="Delete task" className="close-button" aria-describedby={task.id}>
           <FaTimes
             style={{ color: 'red', cursor: 'pointer' }}
             onClick={() => onDelete(task.id)}
