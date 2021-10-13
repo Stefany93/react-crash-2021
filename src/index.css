@@ -6,6 +6,14 @@
   padding: 0;
 }
 
+*:focus{
+  outline: 2px solid orange;
+}
+
+button:focus, input[type="submit"]:focus{
+  outline-offset: 2px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
