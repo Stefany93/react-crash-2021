@@ -1,4 +1,4 @@
-import { FaTimes } from 'react-icons/fa'
+import { FaBell, FaTimes } from 'react-icons/fa'
 
 const Task = ({ task, onDelete, onToggle }) => {
   return (
@@ -19,6 +19,9 @@ const Task = ({ task, onDelete, onToggle }) => {
         </button>
         </div>
       <p>{task.day}</p>
+      {task.reminder && 
+        <div> <FaBell aria-hidden="true" />  Reminder set</div>      
+      }
       
     </div>
   )
