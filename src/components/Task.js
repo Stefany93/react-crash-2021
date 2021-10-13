@@ -8,7 +8,7 @@ const Task = ({ task, onDelete, onToggle }) => {
     >
       <h3>
         {task.text}{' '}
-        <button>
+        <button aria-label="Delete task">
           <FaTimes
             style={{ color: 'red', cursor: 'pointer' }}
             onClick={() => onDelete(task.id)}
